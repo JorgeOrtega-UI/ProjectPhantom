@@ -38,7 +38,11 @@ body {
 /* ============ UTILITIES =============== */
 /* ====================================== */
 .disabled {
-    display: none;
+    display: none !important;
+}
+
+.active {
+    display: flex !important;
 }
 
 /* ====================================== */
@@ -164,7 +168,8 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 .module-options .menu-content {
-        flex-direction: column;
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
     width: 320px;
     max-height: 450px;
     color: #000000;

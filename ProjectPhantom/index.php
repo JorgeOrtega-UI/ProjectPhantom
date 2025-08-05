@@ -25,14 +25,14 @@
                         </div>
                         <div class="module-content module-options disabled" data-module="moduleOptions">
 
-                            <div class="menu-content overflow-y" data-menu="main">
-                                <div class="menu-content-list">
+                            <div class="menu-content overflow-y disabled" data-menu="main">
+                                <div class="menu-content-list overflow-y">
                                     <div class="menu-link" data-action="navigate" data-target-menu="config">
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">settings</span></div>
                                         <div class="menu-link-text"><span>Configuración</span></div>
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">chevron_right</span></div>
                                     </div>
-                                    <div class="menu-link">
+                                    <div class="menu-link" data-action="navigate" data-target-menu="help">
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">help</span></div>
                                         <div class="menu-link-text"><span>Ayuda y recursos</span></div>
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">chevron_right</span></div>
@@ -41,7 +41,7 @@
                             </div>
 
                             <div class="menu-content overflow-y disabled" data-menu="config">
-                                <div class="menu-content-list">
+                                <div class="menu-content-list overflow-y">
                                     <div class="menu-link" data-action="navigate" data-target-menu="aspect">
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">palette</span></div>
                                         <div class="menu-link-text"><span>Aspecto</span></div>
@@ -61,7 +61,7 @@
                             </div>
 
                             <div class="menu-content overflow-y disabled" data-menu="aspect">
-                                <div class="menu-content-list">
+                                <div class="menu-content-list overflow-y">
                                     <div class="menu-link">
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">brightness_auto</span></div>
                                         <div class="menu-link-text"><span>Sincronizar con el sistema</span></div>
@@ -78,7 +78,7 @@
                             </div>
 
                             <div class="menu-content overflow-y disabled" data-menu="language">
-                                <div class="menu-content-list">
+                                <div class="menu-content-list overflow-y">
                                     <div class="menu-link">
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">radio_button_unchecked</span></div>
                                         <div class="menu-link-text"><span>English (United States)</span></div>
@@ -108,6 +108,27 @@
                                 <div class="menu-content-list overflow-y" data-menu-list="location">
                                     <div class="menu-link" style="cursor: default;">
                                         <div class="menu-link-text"><span>Cargando...</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-content overflow-y disabled" data-menu="help">
+                                <div class="menu-content-list overflow-y">
+                                    <div class="menu-link">
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">shield</span></div>
+                                        <div class="menu-link-text"><span>Política de privacidad</span></div>
+                                    </div>
+                                    <div class="menu-link">
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">description</span></div>
+                                        <div class="menu-link-text"><span>Términos y condiciones</span></div>
+                                    </div>
+                                    <div class="menu-link">
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">cookie</span></div>
+                                        <div class="menu-link-text"><span>Política de cookies</span></div>
+                                    </div>
+                                     <div class="menu-link">
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">feedback</span></div>
+                                        <div class="menu-link-text"><span>Enviar comentarios</span></div>
                                     </div>
                                 </div>
                             </div>

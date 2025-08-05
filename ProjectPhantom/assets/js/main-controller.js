@@ -52,17 +52,19 @@ export function initMainController() {
         moduleOptions.classList.add('disabled');
         const allMenus = moduleOptions.querySelectorAll('[data-menu]');
         allMenus.forEach(menu => {
-            if (menu.getAttribute('data-menu') === 'main') {
-                menu.classList.remove('disabled');
-            } else {
-                menu.classList.add('disabled');
-            }
+            menu.classList.add('disabled');
+            menu.classList.remove('active');
         });
     };
     
     // --- FUNCIÓN PARA ABRIR EL MÓDULO ---
     const openModule = () => {
         moduleOptions.classList.remove('disabled');
+        const mainMenu = moduleOptions.querySelector('[data-menu="main"]');
+        if (mainMenu) {
+            mainMenu.classList.remove('disabled');
+            mainMenu.classList.add('active');
+        }
         loadCountryList();
     };
 
@@ -87,8 +89,10 @@ export function initMainController() {
         if (!targetMenuName) return;
         const targetMenu = moduleOptions.querySelector(`[data-menu="${targetMenuName}"]`);
         if (targetMenu) {
+            currentMenu.classList.remove('active');
             currentMenu.classList.add('disabled');
             targetMenu.classList.remove('disabled');
+            targetMenu.classList.add('active');
         }
     });
 
