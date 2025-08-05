@@ -31,7 +31,19 @@
                     </div>
                 </div>
                 <div class="general-content-bottom">
-                    <div class="general-content-scrolleable"></div>
+                    <div class="general-content-scrolleable">
+                        <div class="section-wrapper">
+                            <div class="section-content active">
+                                <div class="section-hero">
+                                    <h1>Every tool you need to work with PDFs in one place</h1>
+                                    <h2>Every tool you need to use PDFs, at your fingertips. All are 100% FREE and easy to use! Merge, split, compress, convert, rotate, unlock and watermark PDFs with just a few clicks.</h2>
+                                </div>
+                            </div>
+                            <div class="section-content disabled">2</div>
+                            <div class="section-content disabled">3</div>
+                            <div class="section-content disabled">4</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

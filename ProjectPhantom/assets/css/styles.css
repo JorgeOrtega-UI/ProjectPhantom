@@ -86,6 +86,7 @@ body {
     width: 100%;
     height: 100%;
 }
+
 /* ====================================== */
 /* =============== HEADER =============== */
 /* ====================================== */
@@ -139,7 +140,9 @@ body {
 
 .header-button:hover {
     background-color: #f5f5fa;
-}/* ==========================================================================
+}
+
+/* ==========================================================================
    6. Componente: Menú y Enlaces
    ========================================================================== */
 .menu-list {
@@ -208,4 +211,67 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 12px #00000020;
     will-change: transform, opacity;
+}
+
+.disabled {
+    display: none;
+}
+
+.active {
+    display: flex;
+}
+
+.section-hero {
+    width: 100%;
+    position: relative;
+    padding: 30px 45px;
+    text-align: center;
+}
+
+.section-hero h1 {
+        font-weight: 600;
+    font-size: 42px;
+    line-height: 52px;
+    color: #33333b;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4px;
+    max-width: 1100px;
+}
+
+.section-hero h2 {
+    line-height: 32px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #47474f;
+    max-width: 980px;
+    margin: auto;
+}@media (max-width: 90em) {
+    .home-title {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 90em) {
+    .section-hero h2 {
+        margin-bottom: 12px;
+    }
+}
+@media (max-width: 991.98px) {
+    .section-hero h2 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}@media (max-width: 767.98px) {
+    .section-hero h1 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+}
+@media (max-width: 767.98px) {
+    .section-hero h2 {
+        font-size: 16px;
+        line-height: 20px;
+    }
 }
