@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <title>ProjectPhantom - Home</title>
 </head>
@@ -17,16 +18,34 @@
                         <div class="header-left"></div>
                         <div class="header-right">
                             <div class="header-item">
-                                <div class="header-button"></div>
+                                <div class="header-button" data-action="toggleModuleOptions">
+                                    <span class="material-symbols-rounded">more_vert</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="module-content module-options">
+                        <div class="module-content module-options disabled" data-module="moduleOptions">
                             <div class="menu-content">
                                 <div class="menu-list">
                                     <div class="menu-link">
-                                        <div class="menu-link-icon"></div>
+                                        <div class="menu-link-icon">
+                                            <span class="material-symbols-rounded">settings</span>
+                                        </div>
                                         <div class="menu-link-text">
                                             <span>Configuracion</span>
+                                        </div>
+                                         <div class="menu-link-icon">
+                                            <span class="material-symbols-rounded">arrow_right</span>
+                                        </div>
+                                    </div>
+                                    <div class="menu-link">
+                                        <div class="menu-link-icon">
+                                            <span class="material-symbols-rounded">help</span>
+                                        </div>
+                                        <div class="menu-link-text">
+                                            <span>Ayuda y recursos</span>
+                                        </div>
+                                        <div class="menu-link-icon">
+                                            <span class="material-symbols-rounded">arrow_right</span>
                                         </div>
                                     </div>
                                 </div>
