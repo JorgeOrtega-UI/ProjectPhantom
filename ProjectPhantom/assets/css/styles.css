@@ -35,16 +35,22 @@ body {
 }
 
 /* ====================================== */
-/* ========== PAGE WRAPPER ============= */
+/* ============ UTILITIES =============== */
+/* ====================================== */
+.disabled {
+    display: none;
+}
+
+/* Nota: La clase .active se usa en componentes, por lo que su estilo se define con ellos */
+
+/* ====================================== */
+/* ============ LAYOUT ================== */
 /* ====================================== */
 .page-wrapper {
     width: 100%;
     height: 100%;
 }
 
-/* ====================================== */
-/* ========== MAIN CONTENT ============== */
-/* ====================================== */
 .main-content {
     display: flex;
     flex-direction: row;
@@ -55,9 +61,6 @@ body {
     background-color: #f5f5fa;
 }
 
-/* ====================================== */
-/* ========== GENERAL CONTENT =========== */
-/* ====================================== */
 .general-content {
     position: relative;
     display: flex;
@@ -88,8 +91,10 @@ body {
 }
 
 /* ====================================== */
-/* =============== HEADER =============== */
+/* ============ COMPONENTS ============== */
 /* ====================================== */
+
+/* ---------- Header ---------- */
 .header {
     position: relative;
     display: flex;
@@ -142,9 +147,28 @@ body {
     background-color: #f5f5fa;
 }
 
-/* ==========================================================================
-   6. Componente: Menú y Enlaces
-   ========================================================================== */
+/* ---------- Module & Menu ---------- */
+.module-content.module-options {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 5px;
+    z-index: 999;
+    height: auto;
+}
+
+.module-options .menu-content {
+    flex-direction: column;
+    width: 320px;
+    max-height: 450px;
+    padding: 8px;
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000020;
+    will-change: transform, opacity;
+}
+
 .menu-list {
     display: flex;
     flex-direction: column;
@@ -158,6 +182,7 @@ body {
     display: flex;
     flex: 0 0 auto;
     flex-direction: row;
+    align-items: center;
     width: 100%;
     height: 40px;
     color: #000000;
@@ -185,39 +210,13 @@ body {
 }
 
 .menu-link-text {
-    display: block;
     flex: 1 1 auto;
-    align-self: center;
     overflow: hidden;
     text-align: start;
 }
 
-.module-content.module-options {
-    position: absolute;
-    top: calc(100% + 5px);
-    right: 5px;
-    z-index: 999;
-    height: auto;
-}
-
-.module-options .menu-content {
-    flex-direction: column;
-    width: 320px;
-    max-height: 450px;
-    padding: 8px;
-    color: #000000;
-    background-color: #ffffff;
-    border: 1px solid transparent;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px #00000020;
-    will-change: transform, opacity;
-}
-
-.disabled {
-    display: none;
-}
-
-.active {
+/* ---------- Section Content ---------- */
+.section-content.active {
     display: flex;
 }
 
@@ -229,14 +228,12 @@ body {
 }
 
 .section-hero h1 {
-        font-weight: 600;
+    font-weight: 600;
     font-size: 42px;
     line-height: 52px;
     color: #33333b;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 4px;
+    margin: 0 auto 4px auto;
     max-width: 1100px;
 }
 
@@ -247,29 +244,32 @@ body {
     color: #47474f;
     max-width: 980px;
     margin: auto;
-}@media (max-width: 90em) {
-    .home-title {
-        padding: 24px;
-    }
 }
 
-@media (max-width: 90em) {
-    .section-hero h2 {
-        margin-bottom: 12px;
-    }
-}
+/* ====================================== */
+/* ============ MEDIA QUERIES =========== */
+/* ====================================== */
 @media (max-width: 991.98px) {
     .section-hero h2 {
         font-size: 20px;
         line-height: 28px;
     }
-}@media (max-width: 767.98px) {
+}
+
+@media (max-width: 90em) {
+
+    /* 1440px */
+    .section-hero h2 {
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 767.98px) {
     .section-hero h1 {
         font-size: 24px;
         line-height: 34px;
     }
-}
-@media (max-width: 767.98px) {
+
     .section-hero h2 {
         font-size: 16px;
         line-height: 20px;
