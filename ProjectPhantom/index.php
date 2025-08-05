@@ -44,33 +44,43 @@
                                 <div class="menu-content-list overflow-y">
                                     <div class="menu-link" data-action="navigate" data-target-menu="aspect">
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">palette</span></div>
-                                        <div class="menu-link-text"><span>Aspecto</span></div>
+                                        <div class="menu-link-text">
+                                            <span>Aspecto:</span>
+                                            <span class="menu-link-value" data-value-for="aspect"></span>
+                                        </div>
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">chevron_right</span></div>
                                     </div>
                                     <div class="menu-link" data-action="navigate" data-target-menu="language">
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">language</span></div>
-                                        <div class="menu-link-text"><span>Lenguaje</span></div>
+                                        <div class="menu-link-text">
+                                            <span>Lenguaje:</span>
+                                            <span class="menu-link-value" data-value-for="language"></span>
+                                        </div>
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">chevron_right</span></div>
                                     </div>
                                     <div class="menu-link" data-action="navigate" data-target-menu="location">
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">location_on</span></div>
-                                        <div class="menu-link-text"><span>Ubicación</span></div>
+                                        <div class="menu-link-text">
+                                            <span>Ubicación:</span>
+                                            <span class="menu-link-value" data-value-for="location"></span>
+                                        </div>
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">chevron_right</span></div>
                                     </div>
                                 </div>
                             </div>
 
+                            {}
                             <div class="menu-content overflow-y disabled" data-menu="aspect">
                                 <div class="menu-content-list overflow-y">
-                                    <div class="menu-link">
+                                    <div class="menu-link" data-theme="system">
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">brightness_auto</span></div>
                                         <div class="menu-link-text"><span>Sincronizar con el sistema</span></div>
                                     </div>
-                                    <div class="menu-link">
+                                    <div class="menu-link" data-theme="dark">
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">dark_mode</span></div>
                                         <div class="menu-link-text"><span>Tema oscuro</span></div>
                                     </div>
-                                    <div class="menu-link">
+                                    <div class="menu-link" data-theme="light">
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">light_mode</span></div>
                                         <div class="menu-link-text"><span>Tema claro</span></div>
                                     </div>
@@ -79,16 +89,16 @@
 
                             <div class="menu-content overflow-y disabled" data-menu="language">
                                 <div class="menu-content-list overflow-y">
-                                    <div class="menu-link">
-                                        <div class="menu-link-icon"><span class="material-symbols-rounded">radio_button_unchecked</span></div>
+                                    <div class="menu-link" data-lang="en-US">
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">language</span></div>
                                         <div class="menu-link-text"><span>English (United States)</span></div>
                                     </div>
-                                    <div class="menu-link">
-                                        <div class="menu-link-icon"><span class="material-symbols-rounded">radio_button_unchecked</span></div>
+                                    <div class="menu-link" data-lang="es-MX">
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">language</span></div>
                                         <div class="menu-link-text"><span>Español (México)</span></div>
                                     </div>
-                                    <div class="menu-link">
-                                        <div class="menu-link-icon"><span class="material-symbols-rounded">radio_button_unchecked</span></div>
+                                    <div class="menu-link" data-lang="fr-FR">
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">language</span></div>
                                         <div class="menu-link-text"><span>Français (France)</span></div>
                                     </div>
                                 </div>

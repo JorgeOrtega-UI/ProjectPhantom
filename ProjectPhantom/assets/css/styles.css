@@ -41,8 +41,17 @@ body {
     display: none !important;
 }
 
-.active {
+.active-menu {
     display: flex !important;
+}
+
+.disabled-interactive {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.preview-active {
+    background-color: #f5f5fa;
 }
 
 /* ====================================== */
@@ -228,6 +237,10 @@ body {
     background-color: #f5f5fa;
 }
 
+.menu-link.active {
+    background-color: #e8e8f0;
+}
+
 .menu-link-icon {
     display: flex;
     justify-content: center;
@@ -237,10 +250,39 @@ body {
     height: 100%;
 }
 
+/* Corrección para Elipsis */
 .menu-link-text {
     flex: 1 1 auto;
+    min-width: 0; /* Permite que el contenedor se encoja */
     overflow: hidden;
     text-align: start;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.menu-link-text > span {
+    white-space: nowrap;
+}
+
+.menu-link-value {
+    margin-left: 4px; /* Pequeño espacio entre la etiqueta y el valor */
+    color: #6c757d; /* Un color ligeramente diferente para el valor */
+    font-weight: 400;
+}
+
+/* ---------- Loader Spinner ---------- */
+.loader {
+    border: 2px solid #f0f0f0;
+    border-top: 2px solid #6200ea;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 /* ---------- Section Content ---------- */
