@@ -24,32 +24,94 @@
                             </div>
                         </div>
                         <div class="module-content module-options disabled" data-module="moduleOptions">
-                            <div class="menu-content">
-                                <div class="menu-list">
-                                    <div class="menu-link">
-                                        <div class="menu-link-icon">
-                                            <span class="material-symbols-rounded">settings</span>
-                                        </div>
-                                        <div class="menu-link-text">
-                                            <span>Configuracion</span>
-                                        </div>
-                                         <div class="menu-link-icon">
-                                            <span class="material-symbols-rounded">arrow_right</span>
-                                        </div>
+
+                            <div class="menu-content overflow-y" data-menu="main">
+                                <div class="menu-content-list">
+                                    <div class="menu-link" data-action="navigate" data-target-menu="config">
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">settings</span></div>
+                                        <div class="menu-link-text"><span>Configuración</span></div>
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">chevron_right</span></div>
                                     </div>
                                     <div class="menu-link">
-                                        <div class="menu-link-icon">
-                                            <span class="material-symbols-rounded">help</span>
-                                        </div>
-                                        <div class="menu-link-text">
-                                            <span>Ayuda y recursos</span>
-                                        </div>
-                                        <div class="menu-link-icon">
-                                            <span class="material-symbols-rounded">arrow_right</span>
-                                        </div>
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">help</span></div>
+                                        <div class="menu-link-text"><span>Ayuda y recursos</span></div>
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">chevron_right</span></div>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="menu-content overflow-y disabled" data-menu="config">
+                                <div class="menu-content-list">
+                                    <div class="menu-link" data-action="navigate" data-target-menu="aspect">
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">palette</span></div>
+                                        <div class="menu-link-text"><span>Aspecto</span></div>
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">chevron_right</span></div>
+                                    </div>
+                                    <div class="menu-link" data-action="navigate" data-target-menu="language">
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">language</span></div>
+                                        <div class="menu-link-text"><span>Lenguaje</span></div>
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">chevron_right</span></div>
+                                    </div>
+                                    <div class="menu-link" data-action="navigate" data-target-menu="location">
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">location_on</span></div>
+                                        <div class="menu-link-text"><span>Ubicación</span></div>
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">chevron_right</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-content overflow-y disabled" data-menu="aspect">
+                                <div class="menu-content-list">
+                                    <div class="menu-link">
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">brightness_auto</span></div>
+                                        <div class="menu-link-text"><span>Sincronizar con el sistema</span></div>
+                                    </div>
+                                    <div class="menu-link">
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">dark_mode</span></div>
+                                        <div class="menu-link-text"><span>Tema oscuro</span></div>
+                                    </div>
+                                    <div class="menu-link">
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">light_mode</span></div>
+                                        <div class="menu-link-text"><span>Tema claro</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-content overflow-y disabled" data-menu="language">
+                                <div class="menu-content-list">
+                                    <div class="menu-link">
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">radio_button_unchecked</span></div>
+                                        <div class="menu-link-text"><span>English (United States)</span></div>
+                                    </div>
+                                    <div class="menu-link">
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">radio_button_unchecked</span></div>
+                                        <div class="menu-link-text"><span>Español (México)</span></div>
+                                    </div>
+                                    <div class="menu-link">
+                                        <div class="menu-link-icon"><span class="material-symbols-rounded">radio_button_unchecked</span></div>
+                                        <div class="menu-link-text"><span>Français (France)</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-content overflow-y disabled" data-menu="location">
+                                <div class="menu-content-header">
+                                    <div class="search-content">
+                                        <div class="search-content-icon">
+                                            <span class="material-symbols-rounded">search</span>
+                                        </div>
+                                        <div class="search-content-text">
+                                            <input type="text" placeholder="Buscar país..." data-search-input="location">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-content-list overflow-y" data-menu-list="location">
+                                    <div class="menu-link" style="cursor: default;">
+                                        <div class="menu-link-text"><span>Cargando...</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -69,6 +131,8 @@
             </div>
         </div>
     </div>
+
+    <script type="module" src="assets/js/app-init.js"></script>
 </body>
 
 </html>

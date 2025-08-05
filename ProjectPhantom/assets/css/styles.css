@@ -41,8 +41,6 @@ body {
     display: none;
 }
 
-/* Nota: La clase .active se usa en componentes, por lo que su estilo se define con ellos */
-
 /* ====================================== */
 /* ============ LAYOUT ================== */
 /* ====================================== */
@@ -88,6 +86,7 @@ body {
 .general-content-scrolleable {
     width: 100%;
     height: 100%;
+    overflow-y: auto;
 }
 
 /* ====================================== */
@@ -155,18 +154,47 @@ body {
     z-index: 999;
     height: auto;
 }
-
+.overflow-y {
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-color: #00000080 transparent;
+    scrollbar-width: thin;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+}
 .module-options .menu-content {
-    flex-direction: column;
+        flex-direction: column;
     width: 320px;
     max-height: 450px;
-    padding: 8px;
     color: #000000;
     background-color: #ffffff;
     border: 1px solid transparent;
     border-radius: 12px;
     box-shadow: 0 4px 12px #00000020;
     will-change: transform, opacity;
+}
+
+.menu-content-header {
+    flex-shrink: 0;
+    padding: 8px;
+    border-bottom: 1px solid #00000020;
+}
+
+.menu-content-list {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-grow: 1;
+    min-height: 0;
+    padding: 8px;
+}
+
+.menu-content-header + .menu-content-list {
+    padding-top: 0;
+    margin-top: 8px;
 }
 
 .menu-list {
@@ -191,12 +219,7 @@ body {
     cursor: pointer;
 }
 
-.menu-link.active {
-    color: #fff;
-    background-color: #000000;
-}
-
-.menu-link:not(.active):hover {
+.menu-link:hover {
     background-color: #f5f5fa;
 }
 
@@ -216,10 +239,6 @@ body {
 }
 
 /* ---------- Section Content ---------- */
-.section-content.active {
-    display: flex;
-}
-
 .section-hero {
     width: 100%;
     position: relative;
@@ -246,6 +265,45 @@ body {
     margin: auto;
 }
 
+/* ---------- Estilos para Búsqueda ---------- */
+.search-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #00000020;
+    flex-shrink: 0;
+}
+
+.search-content-icon {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 100%;
+}
+
+.search-content-text {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.search-content-text input {
+    width: 100%;
+    height: 100%;
+    padding-right: 15px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 0.875rem;
+    font-family: "Roboto Condensed", sans-serif;
+    color: #000000;
+}
+
 /* ====================================== */
 /* ============ MEDIA QUERIES =========== */
 /* ====================================== */
@@ -257,8 +315,6 @@ body {
 }
 
 @media (max-width: 90em) {
-
-    /* 1440px */
     .section-hero h2 {
         margin-bottom: 12px;
     }
