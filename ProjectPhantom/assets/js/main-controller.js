@@ -193,18 +193,20 @@ export function initMainController() {
 
         if (moduleOptions.classList.contains('disabled')) return;
         moduleOptions.classList.add('disabled');
+        moduleOptions.classList.remove('active');
         moduleOptions.querySelectorAll('[data-menu]').forEach(menu => {
-            menu.classList.remove('active-menu');
+            menu.classList.remove('active');
             menu.classList.add('disabled');
         });
     };
     
     const openModule = () => {
         moduleOptions.classList.remove('disabled');
+        moduleOptions.classList.add('active');
         const mainMenu = moduleOptions.querySelector('[data-menu="main"]');
         if (mainMenu) {
             mainMenu.classList.remove('disabled');
-            mainMenu.classList.add('active-menu');
+            mainMenu.classList.add('active');
         }
         if (!countriesLoaded) {
             loadCountryList();
@@ -229,10 +231,10 @@ export function initMainController() {
             const targetMenuName = link.dataset.targetMenu;
             const targetMenu = moduleOptions.querySelector(`[data-menu="${targetMenuName}"]`);
             if (menuContainer && targetMenu) {
-                menuContainer.classList.remove('active-menu');
+                menuContainer.classList.remove('active');
                 menuContainer.classList.add('disabled');
                 targetMenu.classList.remove('disabled');
-                targetMenu.classList.add('active-menu');
+                targetMenu.classList.add('active');
             }
             return;
         }

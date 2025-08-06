@@ -41,7 +41,7 @@ body {
     display: none !important;
 }
 
-.active-menu {
+.active {
     display: flex !important;
 }
 
