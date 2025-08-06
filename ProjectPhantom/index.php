@@ -26,6 +26,9 @@
                         <div class="module-content module-options disabled" data-module="moduleOptions">
 
                             <div class="menu-content overflow-y disabled" data-menu="main">
+                                <div class="pill-container">
+                                    <div class="drag-handle" style="cursor: grab;"></div>
+                                </div>
                                 <div class="menu-content-list overflow-y">
                                     <div class="menu-link" data-action="navigate" data-target-menu="config">
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">settings</span></div>
@@ -41,6 +44,9 @@
                             </div>
 
                             <div class="menu-content overflow-y disabled" data-menu="config">
+                                <div class="pill-container">
+                                    <div class="drag-handle" style="cursor: grab;"></div>
+                                </div>
                                 <div class="menu-content-list overflow-y">
                                     <div class="menu-link" data-action="navigate" data-target-menu="aspect">
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">palette</span></div>
@@ -69,8 +75,11 @@
                                 </div>
                             </div>
 
-                            {}
+
                             <div class="menu-content overflow-y disabled" data-menu="aspect">
+                                <div class="pill-container">
+                                    <div class="drag-handle" style="cursor: grab;"></div>
+                                </div>
                                 <div class="menu-content-list overflow-y">
                                     <div class="menu-link" data-theme="system">
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">brightness_auto</span></div>
@@ -88,6 +97,9 @@
                             </div>
 
                             <div class="menu-content overflow-y disabled" data-menu="language">
+                                <div class="pill-container">
+                                    <div class="drag-handle" style="cursor: grab;"></div>
+                                </div>
                                 <div class="menu-content-list overflow-y">
                                     <div class="menu-link" data-lang="en-US">
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">language</span></div>
@@ -105,6 +117,9 @@
                             </div>
 
                             <div class="menu-content overflow-y disabled" data-menu="location">
+                                <div class="pill-container">
+                                    <div class="drag-handle" style="cursor: grab;"></div>
+                                </div>
                                 <div class="menu-content-header">
                                     <div class="search-content">
                                         <div class="search-content-icon">
@@ -123,6 +138,9 @@
                             </div>
 
                             <div class="menu-content overflow-y disabled" data-menu="help">
+                                <div class="pill-container">
+                                    <div class="drag-handle" style="cursor: grab;"></div>
+                                </div>
                                 <div class="menu-content-list overflow-y">
                                     <div class="menu-link">
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">shield</span></div>
@@ -136,7 +154,7 @@
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">cookie</span></div>
                                         <div class="menu-link-text"><span>Política de cookies</span></div>
                                     </div>
-                                     <div class="menu-link">
+                                    <div class="menu-link">
                                         <div class="menu-link-icon"><span class="material-symbols-rounded">feedback</span></div>
                                         <div class="menu-link-text"><span>Enviar comentarios</span></div>
                                     </div>

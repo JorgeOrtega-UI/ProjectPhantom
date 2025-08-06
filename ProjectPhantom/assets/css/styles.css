@@ -167,6 +167,7 @@ body {
     z-index: 999;
     height: auto;
 }
+
 .overflow-y {
     overflow-x: hidden;
     overflow-y: auto;
@@ -176,8 +177,10 @@ body {
     overscroll-behavior: none;
     -webkit-overflow-scrolling: touch;
 }
+
 .module-options .menu-content {
-    display: none; /* Oculto por defecto */
+    display: none;
+    /* Oculto por defecto */
     flex-direction: column;
     width: 320px;
     max-height: 450px;
@@ -206,7 +209,7 @@ body {
     padding: 8px;
 }
 
-.menu-content-header + .menu-content-list {
+.menu-content-header+.menu-content-list {
     padding-top: 0;
     margin-top: 8px;
 }
@@ -253,20 +256,23 @@ body {
 /* Corrección para Elipsis */
 .menu-link-text {
     flex: 1 1 auto;
-    min-width: 0; /* Permite que el contenedor se encoja */
+    min-width: 0;
+    /* Permite que el contenedor se encoja */
     overflow: hidden;
     text-align: start;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
-.menu-link-text > span {
+.menu-link-text>span {
     white-space: nowrap;
 }
 
 .menu-link-value {
-    margin-left: 4px; /* Pequeño espacio entre la etiqueta y el valor */
-    color: #6c757d; /* Un color ligeramente diferente para el valor */
+    margin-left: 4px;
+    /* Pequeño espacio entre la etiqueta y el valor */
+    color: #6c757d;
+    /* Un color ligeramente diferente para el valor */
     font-weight: 400;
 }
 
@@ -281,8 +287,13 @@ body {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* ---------- Section Content ---------- */
@@ -349,6 +360,50 @@ body {
     font-size: 0.875rem;
     font-family: "Roboto Condensed", sans-serif;
     color: #000000;
+}
+
+.pill-container {
+    display: none;
+    justify-content: center;
+    width: 100%;
+    padding: 8px 0;
+}
+
+.drag-handle {
+    position: relative;
+    display: flex;
+    width: 52px;
+    height: 4px;
+    background-color: #f5f5fa;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+@media (max-width: 468px) {
+    .pill-container {
+        display: flex;
+    }
+
+    .module-content.module-options {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
+        height: 100%;
+        background-color: #00000080;
+    }
+
+    .module-options .menu-content {
+        padding-top: 0;
+        border-bottom: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        max-height: 70vh;
+        width: 100%;
+    }
 }
 
 /* ====================================== */
